@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignition - Event Feedback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Dr.Vithalarao Vikhe patil College of Engineering</h1>
+      <h1>SAFE</h1>
+      <h1>Ignition 2025 </h1>
+      <p class="hero-text">Thank you for participating in our event. We hope you had as much fun attending as we did organizing it.</p>
+
+    </section>
+
+    <section class="form-card" aria-labelledby="form-heading">
+      <p class="privacy-note">Not shared</p>
+      <p class="required-note"><span>*</span> Indicates required question</p>
+
+      <form id="feedbackForm">
+        <h2 id="form-heading" class="sr-only">IGNITION 2025 Feedback Form</h2>
+
+        <div class="field">
+          <label for="rollNo">1. Roll No <span>*</span></label>
+          <input type="text" id="rollNo" name="rollNo" placeholder="Enter your roll number" required />
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>2. Which event did you Participate in ? <span>*</span></legend>
+            <p class="scale-note">Select all that apply</p>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Logo making" />
+              Logo making
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Poster presentation" />
+              Poster presentation
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Photography contests" />
+              Photography contests
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Quiz competion" />
+              Quiz competion
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Photography" />
+              Photography
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Chess competion" />
+              Chess competion
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Model making" />
+              Model making
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="Code clash" />
+              Code clash
+            </label>
+            <label class="option">
+              <input type="checkbox" name="eventParticipated" value="None" />
+              None
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>3. How satisfied were you with the event? <span>*</span></legend>
+            <label class="option">
+              <input type="radio" name="eventSatisfaction" value="Excellent" required />
+              Excellent
+            </label>
+            <label class="option">
+              <input type="radio" name="eventSatisfaction" value="Good" />
+              Good
+            </label>
+            <label class="option">
+              <input type="radio" name="eventSatisfaction" value="Fair" />
+              Fair
+            </label>
+            <label class="option">
+              <input type="radio" name="eventSatisfaction" value="Poor" />
+              Poor
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>4. How satisfied were you with the logistics? <span>*</span></legend>
+            <p class="scale-note">1 = Very dissatisfied &nbsp;&nbsp;&nbsp; 5 = Very satisfied</p>
+            <div class="matrix-wrapper">
+              <table class="rating-matrix">
+                <thead>
+                  <tr>
+                    <th scope="col">Area</th>
+                    <th scope="col">5</th>
+                    <th scope="col">4</th>
+                    <th scope="col">3</th>
+                    <th scope="col">2</th>
+                    <th scope="col">1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">How satisfied were you with the event coordination</th>
+                    <td><input type="radio" name="coordinationRating" value="5" required aria-label="Event coordination 5" /></td>
+                    <td><input type="radio" name="coordinationRating" value="4" aria-label="Event coordination 4" /></td>
+                    <td><input type="radio" name="coordinationRating" value="3" aria-label="Event coordination 3" /></td>
+                    <td><input type="radio" name="coordinationRating" value="2" aria-label="Event coordination 2" /></td>
+                    <td><input type="radio" name="coordinationRating" value="1" aria-label="Event coordination 1" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">How satisfied were you with the event management ?</th>
+                    <td><input type="radio" name="managementRating" value="5" required aria-label="Event management 5" /></td>
+                    <td><input type="radio" name="managementRating" value="4" aria-label="Event management 4" /></td>
+                    <td><input type="radio" name="managementRating" value="3" aria-label="Event management 3" /></td>
+                    <td><input type="radio" name="managementRating" value="2" aria-label="Event management 2" /></td>
+                    <td><input type="radio" name="managementRating" value="1" aria-label="Event management 1" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Welcome activity</th>
+                    <td><input type="radio" name="welcomeActivityRating" value="5" required aria-label="Welcome activity 5" /></td>
+                    <td><input type="radio" name="welcomeActivityRating" value="4" aria-label="Welcome activity 4" /></td>
+                    <td><input type="radio" name="welcomeActivityRating" value="3" aria-label="Welcome activity 3" /></td>
+                    <td><input type="radio" name="welcomeActivityRating" value="2" aria-label="Welcome activity 2" /></td>
+                    <td><input type="radio" name="welcomeActivityRating" value="1" aria-label="Welcome activity 1" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Venue</th>
+                    <td><input type="radio" name="venueRating" value="5" required aria-label="Venue 5" /></td>
+                    <td><input type="radio" name="venueRating" value="4" aria-label="Venue 4" /></td>
+                    <td><input type="radio" name="venueRating" value="3" aria-label="Venue 3" /></td>
+                    <td><input type="radio" name="venueRating" value="2" aria-label="Venue 2" /></td>
+                    <td><input type="radio" name="venueRating" value="1" aria-label="Venue 1" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Closing ceremony</th>
+                    <td><input type="radio" name="closingCeremonyRating" value="5" required aria-label="Closing ceremony 5" /></td>
+                    <td><input type="radio" name="closingCeremonyRating" value="4" aria-label="Closing ceremony 4" /></td>
+                    <td><input type="radio" name="closingCeremonyRating" value="3" aria-label="Closing ceremony 3" /></td>
+                    <td><input type="radio" name="closingCeremonyRating" value="2" aria-label="Closing ceremony 2" /></td>
+                    <td><input type="radio" name="closingCeremonyRating" value="1" aria-label="Closing ceremony 1" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>5. Were the rules and guidelines clearly communicated before the event? <span>*</span></legend>
+            <label class="option">
+              <input type="radio" name="rulesCommunication" value="Yes" required />
+              Yes
+            </label>
+            <label class="option">
+              <input type="radio" name="rulesCommunication" value="No" />
+              No
+            </label>
+            <label class="option">
+              <input type="radio" name="rulesCommunication" value="Maybe" />
+              Maybe
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>6. How would you rate the judging process and fairness ? <span>*</span></legend>
+            <label class="option">
+              <input type="radio" name="judgingFairness" value="Very Fair" required />
+              Very Fair
+            </label>
+            <label class="option">
+              <input type="radio" name="judgingFairness" value="Fair" />
+              Fair
+            </label>
+            <label class="option">
+              <input type="radio" name="judgingFairness" value="Neutral" />
+              Neutral
+            </label>
+            <label class="option">
+              <input type="radio" name="judgingFairness" value="Unfair" />
+              Unfair
+            </label>
+            <label class="option">
+              <input type="radio" name="judgingFairness" value="Very Unfair" />
+              Very Unfair
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <fieldset>
+            <legend>7. How would you rate the overall experience of participating in IGNITION 2025? <span>*</span></legend>
+            <label class="option">
+              <input type="radio" name="overallExperience" value="Excellent" required />
+              Excellent
+            </label>
+            <label class="option">
+              <input type="radio" name="overallExperience" value="Very Good" />
+              Very Good
+            </label>
+            <label class="option">
+              <input type="radio" name="overallExperience" value="Good" />
+              Good
+            </label>
+            <label class="option">
+              <input type="radio" name="overallExperience" value="Average" />
+              Average
+            </label>
+            <label class="option">
+              <input type="radio" name="overallExperience" value="Poor" />
+              Poor
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="submitBtn" class="btn primary">Submit</button>
+        </div>
+      </form>
+
+      <div id="successMessage" class="success hidden" role="status" aria-live="polite">
+        <h3>Thank you!</h3>
+        <p>Your feedback has been submitted successfully.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
