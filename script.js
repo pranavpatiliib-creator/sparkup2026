@@ -1,8 +1,14 @@
 const WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbxq12Qr5Qc4G7nhN81O7NTHxzNM77M9csLjC2nfblDzWIIAhTXrU0Y1c_9Qrfk8NamH/exec";
+  "https://script.google.com/macros/s/AKfycbyy0OEVpEaj6Kb_cFJ9l3PBFAXLmOnx_5nC8kBl5Dhkm2JGQiUj03Pn1HOhPLpPfNAm/exec";
 
 const feedbackForm = document.getElementById("feedbackForm");
 const successMessage = document.getElementById("successMessage");
+const submitBtn = document.getElementById("submitBtn");
+
+const isValidWebAppUrl = (url) =>
+  typeof url === "string" &&
+  url.includes("script.google.com/macros/s/") &&
+  url.endsWith("/exec");
 
 if (feedbackForm && successMessage) {
   const eventChoices = Array.from(
@@ -34,6 +40,11 @@ if (feedbackForm && successMessage) {
   feedbackForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
+    if (!isValidWebAppUrl(WEB_APP_URL)) {
+      alert("Invalid Apps Script URL. Use the deployed Web App /exec URL.");
+      return;
+    }
+
     validateEventChoices();
 
     if (!feedbackForm.checkValidity()) {
@@ -41,7 +52,6 @@ if (feedbackForm && successMessage) {
       return;
     }
 
-    const submitBtn = document.getElementById("submitBtn");
     if (submitBtn) submitBtn.disabled = true;
 
     const selectedEvents = eventChoices
@@ -62,6 +72,7 @@ if (feedbackForm && successMessage) {
     try {
       await fetch(WEB_APP_URL, {
         method: "POST",
+        mode: "no-cors",
         body: payload
       });
 
